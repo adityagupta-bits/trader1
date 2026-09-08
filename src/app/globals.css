@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+:root {
+  --color-background: #0b0e14;
+  --color-card: #0f141c;
+  --color-foreground: #f4f4f5;
+  --color-profit: #10b981;
+  --color-loss: #ef4444;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  overflow-x: hidden;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
